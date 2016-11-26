@@ -1,0 +1,39 @@
+{
+    "name": "Zesty.io PHP Airtable",
+    "description": "An example repo for posting a file payload from Zesty.io to a PHP endpoint then to Airtable",
+    "repository": "https://github.com/ardeay/zesty-io-airtable-php-integration-example",
+    "logo": "https://834e53c6fd9d83efad1a-e596cb4b78daac33febfecb74c502126.ssl.cf2.rackcdn.com/or-zesty-io-outbound-webhook.png",
+    "keywords": [
+        "php",
+        "zesty.io"
+    ],
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-php"
+        }
+    ],
+    "env": {
+        "MAX_FILE_SIZE": {
+            "description": "Max file size to allow (in MB)",
+            "value": "15"
+        },
+        "AIRTABLE_TABLE_ID": {
+            "description": "Air Table ID",
+            "value": ""
+        },
+		"AIRTABLE_API_KEY": {
+            "description": "Air Table API",
+            "value": ""
+        },
+        "AIRTABLE_API_VERSION": {
+            "description": "Airtable API Version",
+            "value": "v0"
+        },
+		"AIRTABLE_NAME": {
+            "description": "Air Table Name (seen in API url)",
+            "value": ""
+        }
+        
+        
+    }
+}
