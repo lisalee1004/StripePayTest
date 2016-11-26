@@ -14,7 +14,7 @@ $token = $_POST['stripeToken'];
 // Create a charge: this will charge the user's card
 try {
   $charge = \Stripe\Charge::create(array(
-    "amount" => $_POST['myamount'];, // Amount in cents
+    "amount" => 100000, // Amount in cents
     "currency" => "usd",
     "source" => $token,
     "description" => "AHP Sponsor a child one time payment."
@@ -22,4 +22,8 @@ try {
 } catch(\Stripe\Error\Card $e) {
   // The card has been declined
 }
+
+$redirectTarget = 'https://3ncpkkss-dev.preview.zestyio.com/thank-you/';
+header('Location: ' . $redirectTarget);
+die();
 ?>
